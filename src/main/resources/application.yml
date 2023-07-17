@@ -1,0 +1,35 @@
+server:
+  port: 9192
+spring:
+  application:
+    name: ORDER-SERVICE
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: test
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 10000
+        readTimeout: 10000
+        loggerLevel: basic
+  circuitbreaker:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  tracing:
+    sampling:
+      probability: 1.0
+
+
+
+
+
+
