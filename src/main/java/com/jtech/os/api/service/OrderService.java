@@ -5,6 +5,7 @@ import com.jtech.os.api.dto.PaymentClient;
 import com.jtech.os.api.dto.TransactionRequest;
 import com.jtech.os.api.dto.TransactionResponse;
 import com.jtech.os.api.entity.Order;
+import com.jtech.os.api.exception.EmptyInputException;
 import com.jtech.os.api.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -34,6 +35,9 @@ public class OrderService {
     public TransactionResponse saveOrder(TransactionRequest request) {
        String response = "";
         Order order = request.getOrder();
+        if(order.getName().isEmpty() || order.getName().length() ==0 ){
+            throw new EmptyInputException("1000","Order name should not be Empty");
+        }
         Payment payment = request.getPayment();
         payment.setOrderId(order.getId());
         payment.setAmount(order.getPrice());

@@ -1,9 +1,7 @@
 package com.jtech.os.api.controller;
 
-import com.jtech.os.api.dto.Payment;
 import com.jtech.os.api.dto.TransactionRequest;
 import com.jtech.os.api.dto.TransactionResponse;
-import com.jtech.os.api.entity.Order;
 import com.jtech.os.api.service.OrderService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
