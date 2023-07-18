@@ -11,6 +11,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * Controller for managing order (Create, List, get, and Delete API).
+ * Annotated with {@link RestController @RestController}, {@link RequestMapping @RequestMapping}.
+ *
+ * @author Manikandan
+ */
 @RestController
 @RequestMapping("/order")
 public class OrderController {

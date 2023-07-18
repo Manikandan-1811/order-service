@@ -11,6 +11,10 @@ public class EmptyInputException extends RuntimeException{
         return errorCode;
     }
 
+    public String getErrorMessage() {
+        return errorMessage;
+    }
+
     public EmptyInputException(String errorCode, String errorMessage) {
         super();
         this.errorCode = errorCode;
