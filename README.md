@@ -1,6 +1,8 @@
 <H1>Order micro service</H1>  <br>
 <H2>How to run?</H2> <br>
 <H3>Local build</H3>
+> mvn clean package <br>
+> mvn spring-boot:run <br>
 <H4>Prerequisites</H4><br>
 Java 8+<br>
 Maven 3.6.3<br>
