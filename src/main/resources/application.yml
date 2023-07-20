@@ -18,14 +18,12 @@ feign:
         connectTimeout: 10000
         readTimeout: 10000
         loggerLevel: basic
-  circuitbreaker:
-    enabled: true
 
 management:
   endpoints:
     web:
       exposure:
-        include: '*'
+        include: beans,env,health,info
   tracing:
     sampling:
       probability: 1.0

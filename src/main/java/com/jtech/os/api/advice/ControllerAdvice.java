@@ -16,6 +16,6 @@ public class ControllerAdvice {
 
     @ExceptionHandler(EmptyInputException.class)
     public ResponseEntity<String> handleEmptyInput(EmptyInputException e){
-        return new ResponseEntity<>("Input Fields is Empty", HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(e.getErrorMessage(), HttpStatus.BAD_REQUEST);
     }
 }
